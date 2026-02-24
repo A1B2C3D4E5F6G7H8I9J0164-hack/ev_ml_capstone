@@ -1,152 +1,156 @@
-⚡ EV RANGE PREDICTION SYSTEM
-🚗 Machine Learning Based Electric Vehicle Analytics Platform
+# ⚡ EV Range Prediction System  
+### 🚗 Machine Learning–Powered Electric Vehicle Analytics Platform
 
-An end-to-end Machine Learning web application that predicts the driving range of electric vehicles (EVs) using vehicle specifications.
-The system is trained using classical ML models and deployed as a public, interactive web application.
+An **end-to-end Machine Learning web application** that predicts the **driving range of electric vehicles (EVs)** using key vehicle specifications.  
+Built with classical ML models and deployed as a **public, interactive Streamlit web app**.
 
-🚀 WHAT DOES THIS PROJECT DO?
+---
 
-🔮 Predicts EV driving range using ML
+## 🚀 What Does This Project Do?
 
-📂 Supports CSV upload for batch predictions
+🔮 Predicts EV driving range using supervised ML (regression)  
+📂 Supports CSV upload for batch predictions  
+🧠 Allows manual input for instant results  
+🌐 Fully deployed and publicly accessible  
+🎨 Modern and clean UI built with Streamlit  
 
-🧠 Allows manual input for instant results
+---
 
-🌐 Fully deployed and publicly accessible
+## 🎯 Problem Statement
 
-🎨 Modern and clean UI built with Streamlit
+Electric vehicles exhibit **significant variation in driving range** depending on factors such as efficiency, acceleration, and performance characteristics.
 
-🎯 PROBLEM STATEMENT
+### ❓ Why is this important?
 
-Electric vehicles have varying driving ranges depending on their specifications such as efficiency, acceleration, and performance parameters.
+- Helps analyze and compare EV performance  
+- Supports EV analytics and planning  
+- Enables data-driven decision-making  
 
-❓ Why is this important?
+This project addresses the problem using **supervised machine learning regression models**.
 
-Helps understand EV performance characteristics
+---
 
-Supports EV analytics and planning
+## 🧠 System Workflow
 
-Enables data-driven decision-making
+### 1️⃣ Data Preprocessing
+- Removed non-informative columns (Brand, Model)
+- Handled missing values
+- Converted categorical variables using **One-Hot Encoding**
+- Ensured a clean, numerical feature space
 
-This project addresses the problem using supervised machine learning (regression).
+---
 
-🧠 SYSTEM WORKFLOW
-1️⃣ DATA PREPROCESSING
+### 2️⃣ Feature Engineering
 
-Removed non-informative columns (Brand, Model)
+Key input features:
 
-Handled missing values
+- 💰 Price (€)
+- ⚙️ Energy Efficiency (Wh/km)
+- 🚀 Acceleration (0–100 km/h)
+- 🏎 Top Speed (km/h)
+- 📊 Encoded categorical attributes
 
-Converted categorical variables using one-hot encoding
+---
 
-Ensured a clean, numerical feature space
+### 3️⃣ Model Training
 
-2️⃣ FEATURE ENGINEERING
+Regression models implemented and compared:
 
-Key input features used:
+- 🌲 Random Forest Regressor  
+- 📈 Gradient Boosting Regressor  
 
-💰 Price (€)
+The final model was selected based on evaluation performance.
 
-⚙️ Energy Efficiency (Wh/km)
+---
 
-🚀 Acceleration (0–100 km/h)
+### 4️⃣ Model Evaluation
 
-🏎 Top Speed (km/h)
+Evaluation metrics used:
 
-📊 Encoded categorical attributes
-
-3️⃣ MODEL TRAINING
-
-The following regression models were implemented and compared:
-
-🌲 Random Forest Regressor
-
-📈 Gradient Boosting Regressor
-
-The final model was selected based on performance metrics.
-
-4️⃣ MODEL EVALUATION
-
-The models were evaluated using standard regression metrics:
-
-MAE – Mean Absolute Error
-
-RMSE – Root Mean Squared Error
-
-R² Score – Coefficient of Determination
+- **MAE** – Mean Absolute Error  
+- **RMSE** – Root Mean Squared Error  
+- **R² Score** – Coefficient of Determination  
 
 These metrics ensure both accuracy and robustness.
 
-🖥️ APPLICATION FEATURES
-✨ INTERACTIVE WEB INTERFACE
+---
 
-📂 Batch Prediction using CSV upload
+## 🖥️ Application Features
 
-🧠 Manual Prediction using form inputs
+✨ Interactive web interface  
+📂 Batch prediction using CSV upload  
+🧠 Manual prediction using form inputs  
+📊 Real-time prediction results  
+⬇️ Downloadable output files  
+🎨 Clean UI with modern visual hierarchy  
 
-📊 Real-time prediction results
+---
 
-⬇️ Downloadable output files
+## 🛠 Technology Stack
 
-🎨 Modern UI with clean visual hierarchy
+### 🔧 Tools & Frameworks
 
-🛠 TECHNOLOGY STACK
-🔧 TOOLS & FRAMEWORKS USED
+- **Programming Language:** Python  
+- **Machine Learning:** scikit-learn  
+- **Data Processing:** pandas, numpy  
+- **Model Serialization:** joblib  
+- **UI Framework:** Streamlit  
+- **Deployment:** Streamlit Community Cloud  
 
-Programming Language: Python
+---
 
-Machine Learning: scikit-learn
+## 🌍 Live Deployment
 
-Data Processing: pandas, numpy
-
-Model Serialization: joblib
-
-UI Framework: Streamlit
-
-Deployment Platform: Streamlit Community Cloud
-
-🌍 LIVE DEPLOYMENT
 ✅ Publicly Hosted Application
 
-The application is deployed online and accessible through a public link.
+🔗 **Live App Link:**  
+👉 PASTE YOUR STREAMLIT LINK HERE
 
-🔗 Live App Link:
-PASTE YOUR STREAMLIT LINK HERE
+---
 
-📁 PROJECT STRUCTURE
+## 📁 Project Structure
+
+```bash
 ev_ml_capstone/
 │
 ├── app.py                # Streamlit application
 ├── ev_model_safe.pkl     # Trained ML model
 ├── requirements.txt      # Dependencies
 ├── README.md             # Project documentation
-▶️ HOW TO RUN LOCALLY
+```
+
+---
+
+## ▶️ How to Run Locally
+
+```bash
 pip install -r requirements.txt
 streamlit run app.py
-🔒 DEPLOYMENT STABILITY DESIGN
+```
 
-To ensure reliability across different environments:
+---
 
-Preprocessing is decoupled from the trained model
+## 🔒 Deployment Stability Design
 
-Input features are dynamically aligned during inference
+To ensure reliability across environments:
 
-Prevents Python and scikit-learn version incompatibility issues
+- Preprocessing is decoupled from the trained model  
+- Input features are dynamically aligned during inference  
+- Prevents Python and scikit-learn version incompatibility issues  
 
-📌 KEY TAKEAWAYS
+---
 
-✅ Built a complete ML pipeline
+## 📌 Key Takeaways
 
-✅ Compared multiple regression models
+✅ Built a complete ML pipeline  
+✅ Compared multiple regression models  
+✅ Designed a modern, user-friendly UI  
+✅ Successfully deployed a real ML application  
 
-✅ Designed a modern, user-friendly UI
+---
 
-✅ Successfully deployed a real ML application
+## 🔮 Future Scope
 
-🔮 FUTURE SCOPE
-
-Agent-based EV infrastructure planning
-
-Charging demand prediction
-
-Optimization-driven EV analytics (Milestone 2)
+- 🤖 Agent-based EV infrastructure planning  
+- 🔌 Charging demand prediction  
+- 📈 Optimization-driven EV analytics (Milestone 2)
