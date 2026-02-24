@@ -1,139 +1,152 @@
-⚡ EV Range Prediction System
+⚡ EV RANGE PREDICTION SYSTEM
+🚗 Machine Learning Based Electric Vehicle Analytics Platform
 
-An end-to-end Machine Learning application that predicts electric vehicle driving range using vehicle specifications.
-Built, deployed, and accessible as a live web application.
+An end-to-end Machine Learning web application that predicts the driving range of electric vehicles (EVs) using vehicle specifications.
+The system is trained using classical ML models and deployed as a public, interactive web application.
 
-🚀 What This Project Does
+🚀 WHAT DOES THIS PROJECT DO?
 
-Predicts EV driving range using ML
+🔮 Predicts EV driving range using ML
 
-Accepts CSV uploads for batch predictions
+📂 Supports CSV upload for batch predictions
 
-Allows manual input for instant predictions
+🧠 Allows manual input for instant results
 
-Deployed publicly with a modern web interface
+🌐 Fully deployed and publicly accessible
 
-🎯 Problem Statement
+🎨 Modern and clean UI built with Streamlit
 
-Electric vehicles vary significantly in driving range based on their specifications.
-Accurately predicting range helps in:
+🎯 PROBLEM STATEMENT
 
-Understanding EV performance
+Electric vehicles have varying driving ranges depending on their specifications such as efficiency, acceleration, and performance parameters.
 
-Supporting data-driven EV adoption
+❓ Why is this important?
 
-Improving analytics for EV planning
+Helps understand EV performance characteristics
 
-This project solves the problem using supervised machine learning regression.
+Supports EV analytics and planning
 
-🧠 How It Works
-1️⃣ Data Preprocessing
+Enables data-driven decision-making
+
+This project addresses the problem using supervised machine learning (regression).
+
+🧠 SYSTEM WORKFLOW
+1️⃣ DATA PREPROCESSING
 
 Removed non-informative columns (Brand, Model)
 
-Cleaned missing values
+Handled missing values
 
-Converted categorical features using one-hot encoding
+Converted categorical variables using one-hot encoding
 
-Prepared numerical feature space for ML models
+Ensured a clean, numerical feature space
 
-2️⃣ Feature Engineering
+2️⃣ FEATURE ENGINEERING
 
-Important features include:
+Key input features used:
 
 💰 Price (€)
 
-⚙️ Efficiency (Wh/km)
+⚙️ Energy Efficiency (Wh/km)
 
 🚀 Acceleration (0–100 km/h)
 
 🏎 Top Speed (km/h)
 
-Encoded categorical attributes
+📊 Encoded categorical attributes
 
-3️⃣ Model Training
+3️⃣ MODEL TRAINING
 
-Two regression models were trained and compared:
+The following regression models were implemented and compared:
 
 🌲 Random Forest Regressor
 
 📈 Gradient Boosting Regressor
 
-The best-performing model was selected based on evaluation metrics.
+The final model was selected based on performance metrics.
 
-4️⃣ Model Evaluation
+4️⃣ MODEL EVALUATION
 
-Models were evaluated using:
+The models were evaluated using standard regression metrics:
 
-MAE (Mean Absolute Error)
+MAE – Mean Absolute Error
 
-RMSE (Root Mean Squared Error)
+RMSE – Root Mean Squared Error
 
-R² Score
+R² Score – Coefficient of Determination
 
-🖥️ Application Features
+These metrics ensure both accuracy and robustness.
 
-✨ Modern UI built with Streamlit
+🖥️ APPLICATION FEATURES
+✨ INTERACTIVE WEB INTERFACE
 
-📂 Upload CSV for bulk predictions
+📂 Batch Prediction using CSV upload
 
-🧠 Manual input for single EV prediction
+🧠 Manual Prediction using form inputs
 
-📊 Instant results display
+📊 Real-time prediction results
 
-⬇️ Downloadable prediction output
+⬇️ Downloadable output files
 
-🌐 Live hosted application
+🎨 Modern UI with clean visual hierarchy
 
-🛠 Tech Stack
-Layer	Tools
-Language	Python
-ML	scikit-learn
-Data	pandas, numpy
-Model Storage	joblib
-UI	Streamlit
-Hosting	Streamlit Community Cloud
-🌍 Live Deployment
+🛠 TECHNOLOGY STACK
+🔧 TOOLS & FRAMEWORKS USED
 
-The application is publicly hosted and accessible online.
+Programming Language: Python
 
-🔗 Live App:
+Machine Learning: scikit-learn
+
+Data Processing: pandas, numpy
+
+Model Serialization: joblib
+
+UI Framework: Streamlit
+
+Deployment Platform: Streamlit Community Cloud
+
+🌍 LIVE DEPLOYMENT
+✅ Publicly Hosted Application
+
+The application is deployed online and accessible through a public link.
+
+🔗 Live App Link:
 PASTE YOUR STREAMLIT LINK HERE
 
-📁 Project Structure
+📁 PROJECT STRUCTURE
 ev_ml_capstone/
 │
 ├── app.py                # Streamlit application
 ├── ev_model_safe.pkl     # Trained ML model
 ├── requirements.txt      # Dependencies
-├── README.md             # Documentation
-▶️ Run Locally
+├── README.md             # Project documentation
+▶️ HOW TO RUN LOCALLY
 pip install -r requirements.txt
 streamlit run app.py
-🔒 Deployment Stability
+🔒 DEPLOYMENT STABILITY DESIGN
 
-To ensure reliable deployment across environments:
+To ensure reliability across different environments:
 
-Preprocessing is handled outside the model
+Preprocessing is decoupled from the trained model
 
 Input features are dynamically aligned during inference
 
-This avoids serialization and version compatibility issues
+Prevents Python and scikit-learn version incompatibility issues
 
-📌 Key Takeaways
+📌 KEY TAKEAWAYS
 
-Built a complete ML pipeline from scratch
+✅ Built a complete ML pipeline
 
-Compared multiple regression models
+✅ Compared multiple regression models
 
-Designed and deployed a real web application
+✅ Designed a modern, user-friendly UI
 
-Focused on stability, usability, and clarity
+✅ Successfully deployed a real ML application
 
-🧠 What’s Next
+🔮 FUTURE SCOPE
 
-Agent-based EV infrastructure planning (Milestone 2)
+Agent-based EV infrastructure planning
 
-Demand-based charging analytics
+Charging demand prediction
 
-Optimization-driven decision support
+Optimization-driven EV analytics (Milestone 2)
