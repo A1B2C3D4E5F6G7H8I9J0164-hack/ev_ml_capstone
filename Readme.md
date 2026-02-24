@@ -1,106 +1,139 @@
-EV RANGE PREDICTION SYSTEM
+⚡ EV Range Prediction System
 
-An AI-powered machine learning application to predict the driving range of electric vehicles (EVs) using vehicle specifications. This project demonstrates an end-to-end ML workflow including data preprocessing, feature engineering, model training, evaluation, UI development, and cloud deployment.
+An end-to-end Machine Learning application that predicts electric vehicle driving range using vehicle specifications.
+Built, deployed, and accessible as a live web application.
 
-PROJECT OBJECTIVE
+🚀 What This Project Does
 
-The objective of this project is to build a machine learning–based system that estimates the driving range of an electric vehicle based on its technical specifications such as efficiency, acceleration, price, and top speed.
+Predicts EV driving range using ML
 
-This project aligns with intelligent EV analytics and supports data-driven decision-making for electric mobility and infrastructure planning.
+Accepts CSV uploads for batch predictions
 
-APPROACH AND METHODOLOGY
+Allows manual input for instant predictions
 
-Data Preprocessing
+Deployed publicly with a modern web interface
 
-Removed irrelevant columns such as brand and model
+🎯 Problem Statement
 
-Handled missing values
+Electric vehicles vary significantly in driving range based on their specifications.
+Accurately predicting range helps in:
 
-Converted categorical variables using one-hot encoding
+Understanding EV performance
 
-Ensured all features were numerical and clean
+Supporting data-driven EV adoption
 
-Feature Engineering
-Key features used for prediction include:
+Improving analytics for EV planning
 
-Vehicle price
+This project solves the problem using supervised machine learning regression.
 
-Energy efficiency (Wh/km)
+🧠 How It Works
+1️⃣ Data Preprocessing
 
-Acceleration (0–100 km/h)
+Removed non-informative columns (Brand, Model)
 
-Top speed
+Cleaned missing values
+
+Converted categorical features using one-hot encoding
+
+Prepared numerical feature space for ML models
+
+2️⃣ Feature Engineering
+
+Important features include:
+
+💰 Price (€)
+
+⚙️ Efficiency (Wh/km)
+
+🚀 Acceleration (0–100 km/h)
+
+🏎 Top Speed (km/h)
 
 Encoded categorical attributes
 
-Model Training
-The following regression models were trained and compared:
+3️⃣ Model Training
 
-Random Forest Regressor
+Two regression models were trained and compared:
 
-Gradient Boosting Regressor
+🌲 Random Forest Regressor
+
+📈 Gradient Boosting Regressor
 
 The best-performing model was selected based on evaluation metrics.
 
-Model Evaluation
+4️⃣ Model Evaluation
+
 Models were evaluated using:
 
-Mean Absolute Error (MAE)
+MAE (Mean Absolute Error)
 
-Root Mean Squared Error (RMSE)
+RMSE (Root Mean Squared Error)
 
 R² Score
 
-APPLICATION FEATURES
+🖥️ Application Features
 
-Batch prediction by uploading CSV files
+✨ Modern UI built with Streamlit
 
-Manual prediction using vehicle specifications
+📂 Upload CSV for bulk predictions
 
-Interactive and modern user interface built with Streamlit
+🧠 Manual input for single EV prediction
 
-Downloadable prediction results
+📊 Instant results display
 
-Publicly hosted web application
+⬇️ Downloadable prediction output
 
-TECHNOLOGY STACK
+🌐 Live hosted application
 
-Programming Language: Python
+🛠 Tech Stack
+Layer	Tools
+Language	Python
+ML	scikit-learn
+Data	pandas, numpy
+Model Storage	joblib
+UI	Streamlit
+Hosting	Streamlit Community Cloud
+🌍 Live Deployment
 
-Machine Learning: scikit-learn
+The application is publicly hosted and accessible online.
 
-Data Processing: pandas, numpy
-
-Model Serialization: joblib
-
-UI Framework: Streamlit
-
-Deployment Platform: Streamlit Community Cloud
-
-DEPLOYMENT
-
-The application is publicly deployed using Streamlit Community Cloud, satisfying the mandatory hosting requirement.
-
-Live Application Link:
+🔗 Live App:
 PASTE YOUR STREAMLIT LINK HERE
 
-PROJECT STRUCTURE
-
-ev_ml_capstone
-|-- app.py
-|-- ev_model_safe.pkl
-|-- requirements.txt
-|-- README.md
-
-HOW TO RUN LOCALLY
-
+📁 Project Structure
+ev_ml_capstone/
+│
+├── app.py                # Streamlit application
+├── ev_model_safe.pkl     # Trained ML model
+├── requirements.txt      # Dependencies
+├── README.md             # Documentation
+▶️ Run Locally
 pip install -r requirements.txt
 streamlit run app.py
+🔒 Deployment Stability
 
-DEPLOYMENT STABILITY NOTE
+To ensure reliable deployment across environments:
 
-To ensure deployment stability across different Python and scikit-learn versions, preprocessing was decoupled from the trained model. Input data is aligned dynamically during inference to prevent compatibility issues.
+Preprocessing is handled outside the model
 
-CONCLUSION
+Input features are dynamically aligned during inference
 
-This project demonstrates a complete machine learning pipeline from raw data processing to a deployed web application. It highlights practical skills in model building, evaluation, deployment, and user interface development.
+This avoids serialization and version compatibility issues
+
+📌 Key Takeaways
+
+Built a complete ML pipeline from scratch
+
+Compared multiple regression models
+
+Designed and deployed a real web application
+
+Focused on stability, usability, and clarity
+
+🧠 What’s Next
+
+Agent-based EV infrastructure planning (Milestone 2)
+
+Demand-based charging analytics
+
+Optimization-driven decision support
